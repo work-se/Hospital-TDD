@@ -5,7 +5,9 @@ class Hospital:
 
     def get_status(self, patient_id):
         patient_idx = patient_id - 1
-        return self._patients[patient_idx]
+        statuses_code_to_title_mapping = {0: "Тяжело болен", 1: "Болен", 2: "Слегка болен", 3: "Готов к выписке"}
+        patient_status_code = self._patients[patient_idx]
+        return statuses_code_to_title_mapping[patient_status_code]
 
     def status_up(self, patient_id):
         patient_idx = patient_id - 1
