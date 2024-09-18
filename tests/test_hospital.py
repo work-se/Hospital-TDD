@@ -8,7 +8,7 @@ class TestHospital:
 
         status = hospital.get_status(patient_id=2)
 
-        assert status == 1, "Получен неверный статус пациента"
+        assert status == "Болен", "Получен неверный статус пациента"
 
     def test_status_up(self):
         hospital = Hospital([2, 0])
